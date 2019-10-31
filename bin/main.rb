@@ -31,6 +31,7 @@ while true
   current_player = player1
   puts "#{current_player} Enter your move, any number within 1-9 and press Enter. \nEnter 'q' or 'quit' to quit game. \Enter r to Restart the game"
   choice = gets.chomp
+  #
   if choice.to_i == 1..9
     puts "#{current_player}, your choice is #{choice}"
 
