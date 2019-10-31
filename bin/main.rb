@@ -24,7 +24,7 @@ puts "Please enter the name of the second player:"
 player2 = gets.chomp
 puts "#{player2}, you have been assigned #{PLAYER2_SIGN}"
 
-puts "EMPTY BOARD"
+puts "PRINT BOARD"
 puts "Press Enter to start game"
 # start_key = get.chomp
 while true
@@ -43,6 +43,10 @@ while true
       else 
         flip_players
       end
+
+      #Display board
+      puts "PRINT BOARD"
+
   elsif choice == 'q'
     break
   elsif choice == 'r'
