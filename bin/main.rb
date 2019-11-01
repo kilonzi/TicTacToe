@@ -32,26 +32,26 @@ while true
   puts "#{current_player} Enter your move, any number within 1-9 and press Enter. \nEnter 'q' or 'quit' to quit game. \Enter r to Restart the game"
   choice = gets.chomp
   #
-  if choice.to_i == 1..9
+  if (1..9).include?(choice.to_i)
     puts "#{current_player}, your choice is #{choice}"
 
-    case game_status
+    case Game.game_status
       when 'win'
         puts "#{current_player} you have won the game"
         break
       when 'draw'
         puts "It is a draw."
       else 
-        flip_players
+        Player.flip_players
       end
 
       #Display board
-      puts "PRINT BOARD"
+      puts Board.display
 
   elsif choice == 'q'
-    break
+    Game.quit
   elsif choice == 'r'
-    reset_game
+    Game.reset_game
   else
     puts "You made an invalid choice."
   end
