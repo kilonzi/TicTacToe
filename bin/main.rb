@@ -62,7 +62,7 @@ while true
     puts "You have quit the game. Bye"
     break
   elsif choice == 'r'
-    board = game.reset(board)
+    board = game.reset
     puts "Game was reset"
     board.display
   else

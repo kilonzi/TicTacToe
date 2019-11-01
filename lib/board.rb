@@ -1,19 +1,10 @@
 # frozen_string_literal: true
 
 class Board
-  WIN_COMBINATIONS = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4,8],
-    [2, 4, 6]
-] 
+
   attr_accessor :arr
-  def initialize()
-    @arr =  [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+  def initialize
+    @arr = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
   end
 
   def status(sign)
@@ -25,25 +16,18 @@ class Board
   end
 
   def is_win?(sign)
-    if (@arr[0] == sign && @arr[1] == sign && @arr[2] == sign ) ||
-        (@arr[3] == sign && @arr[4] == sign && @arr[5] == sign ) ||
-        (@arr[6] == sign && @arr[7] == sign && @arr[8] == sign ) ||
-        (@arr[0] == sign && @arr[3] == sign && @arr[6] == sign ) ||
-        (@arr[1] == sign && @arr[4] == sign && @arr[7] == sign ) ||
-        (@arr[2] == sign && @arr[5] == sign && @arr[8] == sign ) ||
-        (@arr[0] == sign && @arr[4] == sign && @arr[8] == sign ) ||
-        (@arr[2] == sign && @arr[4] == sign && @arr[6]==sign )
-      return true
+    if (@arr[0] == sign && @arr[1] == sign && @arr[2] == sign) || (@arr[3] == sign && @arr[4] == sign && @arr[5] == sign) || (@arr[6] == sign && @arr[7] == sign && @arr[8] == sign) || (@arr[0] == sign && @arr[3] == sign && @arr[6] == sign) || (@arr[1] == sign && @arr[4] == sign && @arr[7] == sign) || (@arr[2] == sign && @arr[5] == sign && @arr[8] == sign) || (@arr[0] == sign && @arr[4] == sign && @arr[8] == sign) || (@arr[2] == sign && @arr[4] == sign && @arr[6] == sign)
+      true
     else
-      return false
+      false
     end
   end
 
   def display
     puts " #{@arr[0]} | #{@arr[1]} | #{@arr[2]} "
-    puts "-----------"
+    puts '-----------'
     puts " #{@arr[3]} | #{@arr[4]} | #{@arr[5]} "
-    puts "-----------"
+    puts '-----------'
     puts " #{@arr[6]} | #{@arr[7]} | #{@arr[8]} "
   end
 end
