@@ -1,4 +1,5 @@
 class Move
+		@@moves = Hash.new
     def valid_input?(move)
         #If Int and If between 1 - 9 and q and r
         if move.to_i == 1..9 || move.downcase == "r" || move.downcase == "q"
@@ -13,8 +14,8 @@ class Move
     end
 
     def move(board,index,players_sign)
-        board = [" "," "," "," "," "," "," "," "," "]
-        
+				# board = [" "," "," "," "," "," "," "," "," "]
+        board[index] = players_sign
 
     end
 
@@ -27,21 +28,24 @@ class Move
 
         #show board 
     end
-    def turn
-        # ask for input
+    def turn(board, player, move)
+				# ask for input
         # get input
-        # convert input to index
-        # if move is valid
-        # make the move for index and show board
+				# convert input to index
+				index = move_to_index(index)
+				# if position is taken
+				unless position_taken?(board, index)
+					# make the move for index and show board
+					move(board, index, player.sign)
+					turn_count(sign)
+				end
         # else
         # ask for input again until you get a valid move
         # end
     end
 
-    def turn_count(sign)
-        {x=>1, o=>1}
-        x = [1,3,5,7,9]
-        o = [2,4,6,8]
+    def turn_count(board)
+       return board.count("")
         #number of turns that have been played and who is to play next
     end
 end

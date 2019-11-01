@@ -45,7 +45,7 @@ while true
         flip_players
       end
   elsif choice == 'q'
-    break
+    Game.quit
   elsif choice == 'r'
     reset_game
   else
