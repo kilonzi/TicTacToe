@@ -20,7 +20,7 @@ class Move
 
   def position_taken?(board, index)
     # check if the position is taken
-    board.arr[index] == ' ' ? false : true
+    !(board.arr[index] == ' ')
   end
 
   def turn?(board, player, choice)

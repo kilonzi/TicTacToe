@@ -12,7 +12,7 @@ class Board
   def status(sign)
     if win?(sign)
       'win'
-    elsif @arr.count { |i| i == ' ' }.zero
+    elsif @arr.count { |i| i == ' ' }.zero?
       'draw'
     end
   end
