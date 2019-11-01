@@ -1,4 +1,4 @@
-
+# frozen_string_literal: true
 class Board
   WIN_COMBINATIONS = [
     [0,1,2],
@@ -15,7 +15,7 @@ class Board
       @arr =  [" "," "," "," "," "," "," "," "," "]
     end
 
-    def status(sign) 
+    def status(sign)
       if is_win?(sign)
         return 'win'
       elsif @arr.count{|i| i==" "} == 0
@@ -23,9 +23,7 @@ class Board
       end
     end
 
-
     def is_win?(sign)
-
       if (@arr[0]==sign && @arr[1]==sign && @arr[2]==sign ) ||
          (@arr[3]==sign && @arr[4]==sign && @arr[5]==sign ) ||
          (@arr[6]==sign && @arr[7]==sign && @arr[8]==sign ) ||
@@ -35,23 +33,9 @@ class Board
          (@arr[0]==sign && @arr[4]==sign && @arr[8]==sign ) ||
          (@arr[2]==sign && @arr[4]==sign && @arr[6]==sign )
         return true
-      else 
+      else
         return false
       end
-
-    end
-
-
-    def self.won?
-    end
-
-    def self.full?
-    end
-
-    def self.draw?
-    end
-
-    def self.over?
     end
 
     def display
@@ -61,9 +45,4 @@ class Board
       puts "-----------"
       puts " #{@arr[6]} | #{@arr[7]} | #{@arr[8]} "
     end
-
-    def turn_count 
-      
-    end
-
 end
