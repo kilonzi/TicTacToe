@@ -20,14 +20,14 @@ class Move
 
   def position_taken?(board, index)
     # check if the position is taken
-    (board.arr[index] == ' ') ? false : true
+    board.arr[index] == ' ' ? false : true
   end
 
   def turn?(board, player, choice)
     # convert input to index
     index = move_to_index(choice)
     until valid_input?(index)
-      puts "Invalid move. Try another "
+      puts 'Invalid move. Try another'
       choice = gets.chomp
     end
     index = move_to_index(choice)
@@ -35,7 +35,7 @@ class Move
     # if position is taken
 
     while position_taken?(board, index)
-      puts "Position taken try again."
+      puts 'Position taken try again.'
       choice = gets.chomp
       index = move_to_index(choice)
     end

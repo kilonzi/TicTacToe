@@ -10,14 +10,14 @@ class Board
   end
 
   def status(sign)
-    if is_win?(sign)
+    if win?(sign)
       'win'
-    elsif @arr.count{ |i| i == ' '} == 0
+    elsif @arr.count { |i| i == ' ' }.zero
       'draw'
     end
   end
 
-  def is_win?(sign)
+  def win?(sign)
     if (@arr[0] == sign && @arr[1] == sign && @arr[2] == sign) || (@arr[3] == sign && @arr[4] == sign && @arr[5] == sign) || (@arr[6] == sign && @arr[7] == sign && @arr[8] == sign) || (@arr[0] == sign && @arr[3] == sign && @arr[6] == sign) || (@arr[1] == sign && @arr[4] == sign && @arr[7] == sign) || (@arr[2] == sign && @arr[5] == sign && @arr[8] == sign) || (@arr[0] == sign && @arr[4] == sign && @arr[8] == sign) || (@arr[2] == sign && @arr[4] == sign && @arr[6] == sign)
       true
     else
