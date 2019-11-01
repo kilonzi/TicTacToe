@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class Move
   @@moves = Hash.new
   def valid_input?(move)
