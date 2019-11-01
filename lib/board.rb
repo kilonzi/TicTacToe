@@ -1,17 +1,19 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/CyclomaticComplexity
+# rubocop:disable Metrics/PerceivedComplexity
+# rubocop:disable Metrics/LineLength
 class Board
-
   attr_accessor :arr
   def initialize
-    @arr = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+    @arr = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
   end
 
   def status(sign)
     if is_win?(sign)
-      return 'win'
-    elsif @arr.count{|i| i == " "} == 0
-      return 'draw'
+      'win'
+    elsif @arr.count{ |i| i == ' '} == 0
+      'draw'
     end
   end
 
@@ -31,3 +33,6 @@ class Board
     puts " #{@arr[6]} | #{@arr[7]} | #{@arr[8]} "
   end
 end
+# rubocop:enable Metrics/CyclomaticComplexity
+# rubocop:enable Metrics/PerceivedComplexity
+# rubocop:enable Metrics/LineLength

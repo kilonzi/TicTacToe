@@ -6,7 +6,7 @@ class Move
     if (0...9).include?(move)
       true
     else
-      false 
+      false
     end
   end
 
@@ -18,12 +18,12 @@ class Move
     board.arr[index] = players_sign
   end
 
-  def position_taken?(board,index)
+  def position_taken?(board, index)
     # check if the position is taken
-    (board.arr[index] == " ") ? false : true
+    (board.arr[index] == ' ') ? false : true
   end
 
-  def turn?(board, player,choice)
+  def turn?(board, player, choice)
     # convert input to index
     index = move_to_index(choice)
     until valid_input?(index)
@@ -33,17 +33,13 @@ class Move
     index = move_to_index(choice)
 
     # if position is taken
-    if !position_taken?(board, index)
-      # make the move for index and show board
-      move(board, index, player.sign)
-    else
-      while position_taken?(board, index)
-        puts "Position taken try again."
-        choice = gets.chomp
-        index = move_to_index(choice)
-      end
-      move(board, index, player.sign)
+
+    while position_taken?(board, index)
+      puts "Position taken try again."
+      choice = gets.chomp
+      index = move_to_index(choice)
     end
+    move(board, index, player.sign)
     # else
     # ask for input again until you get a valid move
     # end
