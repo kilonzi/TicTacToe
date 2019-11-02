@@ -26,11 +26,12 @@ class Board
   end
 
   def display
-    puts " #{@arr[0]} | #{@arr[1]} | #{@arr[2]} "
-    puts '-----------'
-    puts " #{@arr[3]} | #{@arr[4]} | #{@arr[5]} "
-    puts '-----------'
-    puts " #{@arr[6]} | #{@arr[7]} | #{@arr[8]} "
+    the_board = " #{@arr[0]} | #{@arr[1]} | #{@arr[2]} \n "
+    the_board += "----------- \n"
+    the_board += " #{@arr[3]} | #{@arr[4]} | #{@arr[5]} \n"
+    the_board += "----------- \n"
+    the_board += " #{@arr[6]} | #{@arr[7]} | #{@arr[8]} \n"
+    return the_board
   end
 end
 # rubocop:enable Metrics/CyclomaticComplexity

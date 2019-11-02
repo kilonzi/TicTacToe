@@ -28,8 +28,13 @@ while true
 
   if (1..9).include?(choice.to_i)
     puts "#{current_player.name}, your choice is #{choice}"
+    while moves.position_taken?(board, choice)
+      puts 'Position taken try again.'
+      choice = gets.chomp
+      index = moves.move_to_index(choice)
+    end
     moves.turn?(board, current_player,choice)
-    board.display
+    puts board.display
 
     case board.status(current_player.sign)
       when 'win'
@@ -48,7 +53,7 @@ while true
   elsif choice == 'r'
     board = game.reset
     puts "Game was reset"
-    board.display
+    puts board.display
   else
     puts "You made an invalid choice."
   end
