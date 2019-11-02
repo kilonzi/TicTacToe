@@ -31,7 +31,6 @@ class Board
     the_board += " #{@arr[3]} | #{@arr[4]} | #{@arr[5]} \n"
     the_board += "----------- \n"
     the_board += " #{@arr[6]} | #{@arr[7]} | #{@arr[8]} \n"
-    return the_board
   end
 end
 # rubocop:enable Metrics/CyclomaticComplexity
