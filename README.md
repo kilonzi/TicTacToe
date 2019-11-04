@@ -40,5 +40,5 @@ If you always pay attention and look ahead, you'll never lose a game of Tic-Tac-
 Fork this repo and submit a PR for review and potential merge to main branch
 
 ## Engineers
-[Edem Agbenyo](https://github.com/edemagbenyo/)
-[John Kilonzi](https://github.com/kilonzi)
+1. [Edem Agbenyo](https://github.com/edemagbenyo/)
+2. [John Kilonzi](https://github.com/kilonzi)
