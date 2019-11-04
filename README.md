@@ -30,3 +30,15 @@ You also have to watch where the other player puts its O. That could change what
 
 If you always pay attention and look ahead, you'll never lose a game of Tic-Tac-Toe. You may not win, but at least you'll tie.
 
+# TECHNICAL DOCUMENTATION
+## Pre-requisites
+1. Ruby (Version 2.6)
+2. Code Editor of your taste (VS Code recommended)
+3. Rubocop Gem installed [gem install rubocop]
+
+## How to contribute and partipate
+Fork this repo and submit a PR for review and potential merge to main branch
+
+## Engineers
+![Edem Agbenyo](https://github.com/edemagbenyo/)
+![John Kilonzi](https://github.com/kilonzi)
