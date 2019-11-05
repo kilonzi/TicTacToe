@@ -21,9 +21,37 @@ describe Board do
   end
 
   describe 'game is win' do
-    it 'when all marks are in a row' do
+    it 'when same marks are in a diagonal from left' do
       board.arr = ['O', ' ', ' ', ' ', 'O', ' ', ' ', ' ', 'O']
       expect(board.win?('O')).to be_truthy
+    end
+    it 'when same marks are in a diagonal from right' do
+      board.arr = [' ', ' ', 'O', ' ', 'O', ' ', 'O', ' ', ' ']
+      expect(board.win?('O')).to be_truthy
+    end
+    it 'when same marks are in the first row' do
+      board.arr = ['O', 'O', 'O', ' ', ' ', ' ', ' ', ' ', ' ']
+      expect(board.win?('O')).to be_truthy
+    end
+    it 'when same marks are in the second row' do
+      board.arr = [' ', ' ', ' ', 'O', 'O', 'O', ' ', ' ', ' ']
+      expect(board.win?('O')).to be_truthy
+    end
+    it 'when same marks are in the third row' do
+      board.arr = [' ', ' ', ' ', ' ', ' ', ' ', 'O', 'O', 'O']
+      expect(board.win?('O')).to be_truthy
+    end
+    it 'when same marks are in the first column' do
+      board.arr = ['X', ' ', ' ', 'X', ' ', ' ', 'X', ' ', ' ']
+      expect(board.win?('X')).to be_truthy
+    end
+    it 'when same marks are in the second column' do
+      board.arr = [' ', 'X', ' ', ' ', 'X', ' ', ' ', 'X', ' ']
+      expect(board.win?('X')).to be_truthy
+    end
+    it 'when same marks are in the third column' do
+      board.arr = [' ', ' ', 'X', ' ', ' ', 'X', ' ', ' ', 'X']
+      expect(board.win?('X')).to be_truthy
     end
   end
 end
