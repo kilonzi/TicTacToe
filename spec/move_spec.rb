@@ -2,9 +2,8 @@
 
 require_relative('../lib/move')
 require_relative('../lib/board')
-
 describe Move do
-  let(:move){Move.new}
+  let(:move){ Move.new }
   context "a move" do
     it " is valid when choice between 0 and 8" do
       expect(move).to be_valid_input(rand(0..8))
@@ -65,16 +64,11 @@ describe Move do
       expect(board.arr).to be == ([' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'X'])
     end
   end
-
   describe "Position" do
     it "is taken" do
       board = Board.new
       move.move(board, move.move_to_index(1), 'X')
       expect(move).to be_position_taken(board, 1)
     end
-
   end
-
-
-
 end
