@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/BlockLength
 require_relative('../lib/move')
 require_relative('../lib/board')
 describe Move do
@@ -55,12 +56,12 @@ describe Move do
     end
     it 'is assigned to position 8 on the board' do
       board = Board.new
-      move.move(board, 7 ,'X')
+      move.move(board, 7, 'X')
       expect(board.arr).to be == [' ', ' ', ' ', ' ', ' ', ' ', ' ', 'X', ' ']
     end
     it 'is assigned to position 9 on the board' do
       board = Board.new
-      move.move(board, 8 ,'X')
+      move.move(board, 8, 'X')
       expect(board.arr).to be == [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'X']
     end
   end
@@ -72,3 +73,4 @@ describe Move do
     end
   end
 end
+# rubocop:disable Metrics/BlockLength
