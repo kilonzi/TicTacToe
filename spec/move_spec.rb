@@ -73,4 +73,4 @@ describe Move do
     end
   end
 end
-# rubocop:disable Metrics/BlockLength
+# rubocop:enable Metrics/BlockLength
