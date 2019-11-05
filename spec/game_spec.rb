@@ -3,7 +3,7 @@
 require_relative('../lib/game')
 require_relative('../lib/player')
 describe Game do
-  let(:game){ Game.new }
+  let(:game) { Game.new }
 
   describe 'game' do
     it 'returns the next player to take turn' do
