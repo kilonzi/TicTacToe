@@ -26,7 +26,6 @@ while game_status
       position_taken = false
     end
     puts "DISPLAY BOARD"
-
     case board_status
       when 'win'
         puts "#{current_player} you have won the game"
